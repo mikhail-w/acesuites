@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: "Oswald", sans-serif; */
+    /* font-family: "Oswald", sans-serif; */
+    /* font-family: "Tilt Warp", cursive; */
+    font-family: "Work Sans", sans-serif;
+}
+
+/* =====================HEADER AND NAVBAR======================= */
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 3rem;
+}
+
+header .nav-bar {
+    position: relative;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(20px);
+    height: 6em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 200px 150px;
+    transition: 0.5s ease;
+}
+
+.nav-bar .logo {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 20rem;
+    position: absolute;
+    margin-bottom: 25rem;
+}
+
+.navigation .nav-items a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1em;
+    transition-duration: 0.4s;
+    letter-spacing: 0.5px;
+}
+
+.navigation .nav-items a:hover {
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+.navigation .nav-items a:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navigation .nav-items a i {
+    display: none;
+}
+
+.nav-close-btn,
+.nav-menu-btn {
+    display: none;
+}
+
+/*================== SCROLL INDICATOR BAR======================= */
+.scroll-indicator-container {
+    width: 100%;
+    height: 5px;
+}
+
+.scroll-indicator-bar {
+    background: #199fff;
+    width: 0%;
+    height: 100%;
+    box-shadow: 0 5px 25px #199fff, 0 5px 50px #199fff;
+}
+
+/*==================== END HEADER AND NAVBAR=================== */
+.parallax_bg {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.parallax_bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===================HERO SECTION================== */
+.hero .info {
+    color: #fff;
+    /* max-width: 50%; */
+    margin-top: 500px;
+    margin-left: 30px;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-position: 30% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.xl-home {
+    display: block;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    margin-left: -2px;
+    font-size: 100px;
+    line-height: 90px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.text-span-4 {
+    font-weight: 100;
+}
+
+.xl.text-shadow {
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 60%);
+}
+
+.hero .info p {
+    font-size: 1.5rem;
+    margin-top: 0px;
+    text-align: left;
+}
+
+h2 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+/* ===================PARALLAX BACKGROUND==================== */
+.contact {
+    height: 100vh;
+    background-image: url("../images/background2.jpg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg1 {
+    background-image: url("../images/01.jpg");
+}
+
+.bg2 {
+    background-image: url("../images/fleet.jpg");
+}
+
+section {
+    position: relative;
+    padding: 130px 150px;
+    transition: 0.5s ease;
+    transition-property: padding;
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.info {
+    text-align: center;
+    z-index: 1;
+}
+
+.info h1 {
+    font-size: 3.5em;
+}
+
+.info p {
+    font-size: 1.2rem;
+    margin: 2rem auto;
+}
+
+/* ===================CONTACT SECTION================= */
+.contact .info {
+    color: #fff;
+}
+
+.contact .info h1 {
+    font-size: 4rem;
+}
+
+.contact .info p {
+    font-size: 1.5rem;
+    max-width: 70%;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==================MEDIA QUERIES================== */
+@media screen and (max-width: 1100px) {
+    header .nav-bar {
+        padding: 0 50px;
+    }
+
+    section {
+        padding: 30px 50px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header .nav-bar {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 60px 20px;
+        font-size: 0.8em;
+    }
+
+    .hero .info {
+        margin-top: 300px;
+        line-height: 150%;
+    }
+
+    .hero.info h1 {
+        line-height: 0.7px;
+    }
+
+    /* ==================NAVIGATION MENU================== */
+    .nav-menu-btn {
+        display: block;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .navigation {
+        z-index: 99999;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0s ease;
+    }
+
+    .navigation.active {
+        transition: 0.3s ease;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navigation .nav-items {
+        position: relative;
+        background: #fff;
+        width: 400px;
+        max-width: 400px;
+        display: grid;
+        place-content: center;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+        transform: translateY(-200px);
+        transition: 0.3s ease;
+    }
+
+    .navigation.active .nav-items {
+        transform: translateY(0);
+    }
+
+    .navigation .nav-items a {
+        color: #222;
+        font-size: 1em;
+        margin: 15px 50px;
+    }
+
+    .navigation .nav-items a i {
+        display: inline-block;
+        font-size: 1.2em;
+        margin-right: 5px;
+    }
+
+    .nav-close-btn {
+        display: block;
+        color: #222;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.3em;
+        margin: 10px;
+        cursor: pointer;
+    }
+}
