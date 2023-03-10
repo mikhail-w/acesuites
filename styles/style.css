@@ -197,14 +197,65 @@ h2 {
     background: linear-gradient(transparent, #fafafa);
 }
 
-/* .down-arrow a {
+.arrow {
     text-decoration: none;
     color: white;
-    font-size: 100px;
-    font-weight: 300;
+    font-size: 3.5rem;
     position: absolute;
-    bottom: 100px;
-} */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    z-index: 988;
+    width: 100%;
+}
+
+.arrow i {
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    10% {
+        transform: translateY(-5px);
+    }
+
+    20% {
+        transform: translateY(5px);
+    }
+
+    30% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    70% {
+        transform: translateY(7px);
+    }
+
+    80% {
+        transform: translateY(15px);
+    }
+
+    90% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.arrow.sticky {
+    display: none;
+}
+
 section {
     position: relative;
     padding: 4rem;

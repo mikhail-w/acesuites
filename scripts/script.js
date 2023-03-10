@@ -25,5 +25,7 @@ closeBtn.addEventListener("click", () => {
 //==================NAVIGATION BAR EFFECT ON SCROLL=================
 window.addEventListener("scroll", function () {
     var header = document.querySelector("header");
+    var arrow = document.querySelector(".arrow");
     header.classList.toggle('sticky', window.scrollY > 0);
+    arrow.classList.toggle('sticky', window.scrollY > 0)
 });
