@@ -42,7 +42,7 @@ header .nav-bar {
 .logo-pic img {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15px;
     width: 13em;
 }
 
@@ -75,7 +75,8 @@ header .nav-bar {
 
 /*======================= STICKY NAVIGATION======================= */
 header.sticky .nav-bar {
-    background-color: #573280;
+    background-color: #76736eb7;
+    backdrop-filter: blur(20px);
     height: 2rem;
     padding: 2.5rem;
     justify-content: space-between;
@@ -94,10 +95,6 @@ header.sticky .nav-bar .logo-text {
 header.sticky .logo-pic img {
     position: absolute;
     display: none;
-}
-
-header.sticky .nav-bar {
-    /* padding-left: 10px; */
 }
 
 /*======================= SCROLL INDICATOR BAR======================= */
@@ -137,7 +134,7 @@ header.sticky .nav-bar {
 .hero .info {
     color: #fff;
     /* max-width: 50%; */
-    margin-top: 500px;
+    margin-top: 300px;
     margin-left: 30px;
 }
 
@@ -200,6 +197,14 @@ h2 {
     background: linear-gradient(transparent, #fafafa);
 }
 
+/* .down-arrow a {
+    text-decoration: none;
+    color: white;
+    font-size: 100px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 100px;
+} */
 section {
     position: relative;
     padding: 4rem;
@@ -237,7 +242,7 @@ section {
 
 .info p {
     font-size: 1.2rem;
-    margin: 2rem auto;
+    font-weight: 200;
 }
 
 /* ===================CONTACT SECTION================= */
@@ -298,9 +303,12 @@ footer {
         width: 100px;
     }
 
+    .nav-bar .logo-pic {
+        left: 200px;
+    }
+
     header .nav-bar {
         padding: 2.5rem;
-        padding-left: 10px;
     }
 
     section {
@@ -309,12 +317,18 @@ footer {
     }
 
     .hero .info {
-        margin-top: 300px;
+        margin-top: 260px;
         line-height: 150%;
+        /* line-height: 1em; */
     }
 
     .hero.info h1 {
         line-height: 0.7px;
+    }
+
+    .xl.text-shadow.xl-home {
+        line-height: 3.5rem;
+        font-size: 3.2rem;
     }
 
     /* ==================NAVIGATION MENU================== */
