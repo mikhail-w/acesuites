@@ -44,7 +44,7 @@ header .nav-bar {
     display: none;
 }
 
-.logo-pic img {
+.logo img {
     position: absolute;
     top: 10px;
     left: 15px;
@@ -97,7 +97,7 @@ header.sticky .nav-bar .logo-text {
     display: flex;
 }
 
-header.sticky .logo-pic img {
+header.sticky .logo img {
     position: absolute;
     display: none;
 }
@@ -367,17 +367,17 @@ footer {
         font-size: 0.9em;
     }
 
-    .logo-pic img {
+    .logo img {
         width: 100px;
     }
 }
 
-@media screen and (max-width: 850px) {
-    .nav-bar .logo-pic img {
+@media screen and (max-width: 900px) {
+    .nav-bar .logo img {
         width: 100px;
     }
 
-    .nav-bar .logo-pic {
+    .nav-bar .logo {
         left: 200px;
     }
 
