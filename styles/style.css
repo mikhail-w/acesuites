@@ -188,6 +188,23 @@ h2 {
     font-weight: bold;
 }
 
+/* ==================ANIMATION================== */
+h1 {
+    animation-delay: 250ms;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-bottom: 100%;
+    }
+
+    to {
+        margin-bottom: 0%;
+    }
+}
+
 .hero {
     min-height: 100vh;
 }
