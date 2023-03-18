@@ -1,6 +1,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 85px;
+    /* overflow-x: hidden; */
 }
 
 * {
@@ -16,6 +17,7 @@ html {
 
 body {
     min-height: 100vh;
+    width: fit-content;
 }
 
 /* =====================HEADER AND NAVBAR======================= */
@@ -30,9 +32,7 @@ header {
 }
 
 header .nav-bar {
-    /* height: 3rem;
-    padding: 3.5rem; */
-    padding: 30px 30px;
+    padding: 60px 30px;
     position: relative;
     display: flex;
     justify-content: end;
@@ -47,8 +47,8 @@ header .nav-bar {
 .logo img {
     position: absolute;
     top: 10px;
-    left: 15px;
-    width: 13em;
+    left: 20px;
+    width: 200px;
 }
 
 .navigation .nav-items a {
@@ -92,7 +92,7 @@ header.sticky .nav-bar .logo-text {
     font-size: 1.8em;
     font-weight: 600;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-decoration: none;
     display: flex;
 }
@@ -165,11 +165,10 @@ header.sticky .logo img {
 
 .text-span-4 {
     font-weight: 100;
-    tran
 }
 
 .xl.text-shadow {
-    text-shadow: 1px 1px 3px rgb(0 0 0 / 60%);
+    text-shadow: 6px 1px 6px rgb(0 0 0 / 60%);
 }
 
 .hero .info p {
@@ -319,6 +318,27 @@ section {
     font-weight: 200;
 }
 
+/* ===================FLEET SECTION================= */
+.fleet {
+    flex-direction: column;
+    align-items: center;
+}
+
+.browse-fleet-btn {
+    background-color: #199fff;
+    color: #333;
+    border: 1px solid;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 1.5rem;
+    font-weight: 500;
+    margin-top: 16rem;
+}
+
+.browse-fleet-btn:hover {
+    background-color: gold;
+}
+
 /* ===================CONTACT SECTION================= */
 .contact .info {
     color: #fff;
@@ -349,7 +369,7 @@ footer {
 }
 
 .bg2 {
-    background-image: url("../images/fleet.jpg");
+    background-image: url("../images/fleet/bmw/001.jpg");
 }
 
 .contact {
