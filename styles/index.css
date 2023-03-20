@@ -80,7 +80,8 @@ header .nav-bar {
 
 /*======================= STICKY NAVIGATION======================= */
 header.sticky .nav-bar {
-    background-color: #76736eb7;
+    /* background-color: #76736eb7; */
+    background-color: #6F8AB7;
     backdrop-filter: blur(20px);
     height: 2rem;
     padding: 2.5rem;
@@ -292,18 +293,6 @@ section {
     justify-content: center;
 }
 
-/* #about {
-    background-color: #FF6542;
-}
-
-#suites {
-    background-color: #F03A47;
-}
-
-#fleet {
-    background-color: #276FBF;
-    color: white;
-} */
 .info {
     text-align: center;
     z-index: 1;
@@ -340,15 +329,15 @@ section {
 }
 
 /* ===================CONTACT SECTION================= */
-.contact .info {
+.contact-section .info {
     color: #fff;
 }
 
-.contact .info h1 {
+.contact-section .info h1 {
     font-size: 4rem;
 }
 
-.contact .info p {
+.contact-section .info p {
     font-size: 1.5rem;
     max-width: 70%;
 }
@@ -372,12 +361,102 @@ footer {
     background-image: url("../images/fleet/bmw/001.jpg");
 }
 
-.contact {
+.contact-section {
     height: 100vh;
     background-image: url("../images/03_bg.jpg");
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* =========================CONTACT SECTION====================== */
+.contact-info {
+    color: #fff;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    /* padding: 0 30px 0 50px; */
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+    z-index: 9;
+}
+
+.contact-section .contact-info i {
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.contact-form {
+    max-width: 700px;
+    margin-right: 50px;
+}
+
+.contact-form h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.contact-form .text-box {
+    background: #000;
+    color: #fff;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 1px 1px rgba(231, 213, 18, 0.939);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .text-box:first-child {
+    margin-right: 10px;
+}
+
+.contact-form textarea {
+    background: #000;
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-form .send-btn {
+    float: right;
+    background: #2E94E3;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: ;
+}
+
+.contact-form .send-btn:hover {
+    background: #0582e3;
+    /* background: #07f92f; */
 }
 
 /* ==================MEDIA QUERIES================== */
@@ -386,14 +465,10 @@ footer {
         padding: 30px 50px;
         font-size: 0.9em;
     }
-
-    .logo img {
-        width: 100px;
-    }
 }
 
 @media screen and (max-width: 900px) {
-    .nav-bar .logo img {
+    .logo img {
         width: 100px;
     }
 
@@ -495,5 +570,22 @@ footer {
         font-size: 1.3em;
         margin: 10px;
         cursor: pointer;
+    }
+
+    /* ==================CONTACT SECTION================== */
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        margin: 30px 50px;
+    }
+
+    .contact-form h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-form .text-box {
+        width: 100%;
     }
 }
