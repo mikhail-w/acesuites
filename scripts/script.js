@@ -30,30 +30,4 @@ window.addEventListener("scroll", function () {
     arrow.classList.toggle('sticky', window.scrollY > 0)
 });
 
-//=================SEND EMAIL=================
-const form = document.querySelector(".contact-form");
-form.addEventListener("submit", e => {
-    e.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const msg = document.querySelector(".message").value;
 
-    console.log(name);
-    console.log(email);
-    console.log(msg);
-
-    document.querySelector(".contact-form").value = "";
-
-    sendEmail(name, email, msg);
-})
-function sendEmail(name, email, msg) {
-    Email.send({
-        SecureToken: "1b7df69d-1fca-43e4-bccc-5127790a150e",
-        To: 'mikhail.waddell@gmail.com',
-        From: 'mikhail.waddell@gmail.com',
-        Subject: "New Inquiry",
-        Body: "Message from: " + name + "<br>" + "Email: " + email + "<br>" + msg
-    }).then(
-        message => alert(message)
-    );
-}
