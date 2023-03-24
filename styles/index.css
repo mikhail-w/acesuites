@@ -279,7 +279,7 @@ h1 {
     display: none;
 }
 
-section {
+section, .contact-section {
     position: relative;
     padding: 4rem;
     transition: 0.5s ease;
@@ -363,7 +363,7 @@ footer {
 
 .contact-section {
     height: 100vh;
-    background-image: url("../images/03_bg.jpg");
+    background-image: url("../images/003-bg.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -373,7 +373,7 @@ footer {
 /* =========================CONTACT SECTION====================== */
 .contact-info {
     color: #fff;
-    max-width: 500px;
+    /* max-width: 500px; */
     line-height: 65px;
     padding-left: 50px;
     /* padding: 0 30px 0 50px; */
@@ -403,7 +403,7 @@ footer {
 }
 
 .contact-form .text-box {
-    background: #000;
+    background: #fff;
     color: #fff;
     border: none;
     width: calc(50% - 10px);
@@ -411,8 +411,6 @@ footer {
     padding: 12px;
     font-size: 15px;
     border-radius: 5px;
-    /* box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
-    box-shadow: 0 1px 1px rgba(231, 213, 18, 0.939);
     margin-bottom: 20px;
     opacity: 0.9;
 }
@@ -422,8 +420,8 @@ footer {
 }
 
 .contact-form textarea {
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #292828;
     border: none;
     width: 100%;
     padding: 12px;
@@ -457,6 +455,31 @@ footer {
 .contact-form .send-btn:hover {
     background: #0582e3;
     /* background: #07f92f; */
+}
+
+/* ==================ALERT MESSAGE================== */
+.alert-success {
+    z-index: 10;
+    background: #D4EDDA;
+    font-size: 18px;
+    padding: 20px 40px;
+    min-width: 420px;
+    margin: 20px;
+    position: absolute;
+    border-left: 8px solid #3ad66e;
+    border-radius: 4px;
+}
+
+.alert-error {
+    z-index: 10;
+    background: #FFF3CD;
+    font-size: 18px;
+    padding: 20px 40px;
+    min-width: 420px;
+    margin: 20px;
+    position: absolute;
+    border-left: 8px solid #FFA502;
+    border-radius: 4px;
 }
 
 /* ==================MEDIA QUERIES================== */

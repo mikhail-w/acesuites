@@ -24,8 +24,33 @@ closeBtn.addEventListener("click", () => {
 
 //==================NAVIGATION BAR EFFECT ON SCROLL=================
 window.addEventListener("scroll", function () {
-    var header = document.querySelector("header");
-    var arrow = document.querySelector(".arrow");
+    const header = document.querySelector("header");
+    const arrow = document.querySelector(".arrow");
     header.classList.toggle('sticky', window.scrollY > 0);
     arrow.classList.toggle('sticky', window.scrollY > 0)
 });
+
+//=================SEND EMAIL=================
+const form = document.querySelector(".contact-form");
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    console.log(name);
+    console.log(email);
+
+    document.querySelector(".contact-form").reset();
+
+    sendEmail(name, email);
+})
+function sendEmail(name, email) {
+    Email.send({
+        SecureToken: "1b7df69d-1fca-43e4-bccc-5127790a150e",
+        To: 'mikhail.waddell@gmail.com',
+        From: 'mikhail.waddell@gmail.com',
+        Subject: "New Inquiry",
+        Body: "This is the Body",
+    }).then(
+        message => alert(message)
+    );
+}
