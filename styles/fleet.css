@@ -27,14 +27,7 @@ header.sticky .fleet-logo img {
 
 /* ===================HERO SECTION================== */
 .hero:before {
-    background: linear-gradient(transparent, #427AA1);
-}
-
-.fleet-main {
-    background-color: #427AA1;
-    color: white;
-    /* margin-top: 100px; */
-    /* height: 30rem; */
+    background: linear-gradient(transparent, #e8e8e8);
 }
 
 /* ==================HERO TITLE ANIMATION================== */
@@ -55,6 +48,8 @@ header.sticky .fleet-logo img {
 
 /* ==================CAR LIST================== */
 .cars {
+    padding: 3rem;
+    margin: 3rem 3rem 5rem 3rem;
     flex-direction: column;
     align-items: center;
 }
