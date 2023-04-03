@@ -31,7 +31,7 @@ header.sticky .fleet-logo img {
 }
 
 /* ==================HERO TITLE ANIMATION================== */
-.info h1, p {
+.xl-home, .info-p {
     position: relative;
     animation: slide-left 3s;
 }
@@ -47,20 +47,21 @@ header.sticky .fleet-logo img {
 }
 
 /* ==================CAR LIST================== */
+section {
+    height: auto;
+}
+
 .cars {
-    padding: 3rem;
-    margin: 3rem 3rem 5rem 3rem;
     flex-direction: column;
     align-items: center;
 }
 
 .cars ul {
-    width: auto;
-    /* margin: 40px auto 48px auto; */
+    width: 95%;
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px 20px;
+    gap: 60px 20px;
 }
 
 .cars li {
@@ -72,8 +73,7 @@ header.sticky .fleet-logo img {
 }
 
 .cars li img {
-    width: 300px;
-    height: 280px;
+    width: 50%;
     object-fit: cover;
 }
 
@@ -82,11 +82,16 @@ header.sticky .fleet-logo img {
     flex-direction: column;
     justify-content: space-between;
     padding: 24px;
+    font-size: 1rem;
 }
 
 .item-content h2 {
     color: rgb(59, 65, 64);
     margin: 0;
+}
+
+.card {
+    display: flex;
 }
 
 /* ==================MEDIA QUERIES================== */
@@ -105,5 +110,15 @@ header.sticky .fleet-logo img {
 
     .fleet-logo {
         left: 100px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cars li {
+        flex-direction: column;
+    }
+
+    .cars li img {
+        width: 100%;
     }
 }
