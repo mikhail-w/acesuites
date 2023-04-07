@@ -1,4 +1,5 @@
-html, body {
+body {
+    position: relative;
     scroll-behavior: smooth;
     scroll-padding-top: 85px;
     overflow-x: hidden;
@@ -73,9 +74,6 @@ header .nav-bar {
 
 /*======================= STICKY NAVIGATION======================= */
 header.sticky .nav-bar {
-    /* background-color: #76736eb7; */
-    /* background-color: #6F8AB7; */
-    /* background: linear-gradient(to right, #c33764, #1d2671); */
     background: linear-gradient(to right, #141e30, #243b55);
     backdrop-filter: blur(20px);
     height: 2rem;
@@ -113,7 +111,7 @@ header.sticky .logo img {
 
 .parallax_bg {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -134,7 +132,6 @@ header.sticky .logo img {
 /* ===================HERO SECTION================== */
 .hero .info {
     color: #fff;
-    /* max-width: 50%; */
     margin-top: 300px;
     margin-left: 30px;
 }
@@ -343,8 +340,11 @@ footer {
     padding: 0.5rem;
     font-size: 1.2rem;
     display: flex;
-    align-items: center;
     justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
 
 /* ===================PARALLAX BACKGROUND==================== */
@@ -358,7 +358,7 @@ footer {
 
 .contact-section {
     height: 100vh;
-    background-image: url("../images/03_bg.jpg");
+    background-image: url("../images/001_bg.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -368,10 +368,8 @@ footer {
 /* =========================CONTACT SECTION====================== */
 .contact-info {
     color: #fff;
-    /* max-width: 500px; */
     line-height: 65px;
     padding-left: 50px;
-    /* padding: 0 30px 0 50px; */
 }
 
 .contact-info, .contact-form {
@@ -432,7 +430,6 @@ footer {
 
 .contact-form .send-btn {
     float: right;
-    /* background: #2E94E3; */
     background: linear-gradient(to right, #c33764, #1d2671);
     color: #fff;
     border: none;
@@ -570,11 +567,12 @@ footer {
     /* ==================CONTACT SECTION================== */
     .contact-section {
         flex-direction: column;
-        padding: 2rem;
+        padding: 3rem 1.5rem;
+        height: 100%;
     }
 
     .contact-info {
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0;
     }
 

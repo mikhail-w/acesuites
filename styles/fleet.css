@@ -57,7 +57,7 @@ section {
 }
 
 .cars ul {
-    width: 95%;
+    width: 60%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -78,6 +78,7 @@ section {
     justify-content: space-between;
     padding: 24px;
     font-size: 1rem;
+    width: 50vw;
 }
 
 .item-content h2 {
@@ -90,8 +91,8 @@ section {
 }
 
 .carousel {
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
+    height: 30vh;
     position: relative;
 }
 
@@ -117,8 +118,8 @@ section {
 
 .slide img {
     display: inline-block;
-    width: 70vw;
-    height: 100vh;
+    width: 50vw;
+    height: 30vh;
     object-fit: cover;
     object-position: center;
 }
@@ -127,7 +128,7 @@ section {
     position: absolute;
     background: none;
     border: none;
-    font-size: 4rem;
+    font-size: 3rem;
     z-index: 2;
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
@@ -138,21 +139,12 @@ section {
     transform: translateY(-50%);
 }
 
-.carousel-btn:hover, .carousel-btn:focus {
-    color: white;
-    background-color: rgba(0, 0, 0, .2);
-}
-
-.carousel-btn:focus {
-    outline: 1px solid black;
-}
-
 .carousel-btn.prev {
-    left: 1rem;
+    left: .5rem;
 }
 
 .carousel-btn.next {
-    right: 1rem;
+    right: .5rem;
 }
 
 /* ==================MEDIA QUERIES================== */
@@ -175,11 +167,24 @@ section {
 }
 
 @media screen and (max-width: 900px) {
+    .cars ul {
+        width: 95%;
+    }
+
     .cars li {
         flex-direction: column;
     }
 
-    .cars li img {
-        width: 100%;
+    .slide img {
+        width: 100vw;
+    }
+
+    .carousel {
+        width: 85vw;
+        height: 40vh;
+    }
+
+    .item-content {
+        width: 100vw;
     }
 }
