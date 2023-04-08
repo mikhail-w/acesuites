@@ -26,23 +26,12 @@ header {
 }
 
 header .nav-bar {
-    padding: 60px 30px;
+    padding: 25px 30px;
     position: relative;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     transition: 0.5s ease;
-}
-
-.logo-text {
-    display: none;
-}
-
-.logo img {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 200px;
 }
 
 .navigation .nav-items a {
@@ -72,28 +61,34 @@ header .nav-bar {
     display: none;
 }
 
+.logo-title {
+    display: none;
+}
+
+.logo-title img {
+    width: 100px;
+}
+
+.nav-bar .logo img {
+    width: 100px;
+}
+
 /*======================= STICKY NAVIGATION======================= */
 header.sticky .nav-bar {
-    background: linear-gradient(to right, #141e30, #243b55);
-    backdrop-filter: blur(20px);
-    height: 2rem;
-    padding: 2.5rem;
+    /* background: linear-gradient(to right, #141e30, #243b55); */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(45px);
+    /* height: 2rem; */
+    padding: 15px 30px;
     justify-content: space-between;
 }
 
-header.sticky .nav-bar .logo-text {
-    color: white;
-    font-size: 1.8em;
-    font-weight: 600;
-    letter-spacing: 2px;
-    /* text-transform: uppercase; */
-    text-decoration: none;
-    display: flex;
+header.sticky .logo img {
+    display: none;
 }
 
-header.sticky .logo img {
-    position: absolute;
-    display: none;
+header.sticky .logo-title {
+    display: inline-block;
 }
 
 /*======================= SCROLL INDICATOR BAR======================= */
@@ -138,7 +133,7 @@ header.sticky .logo img {
 
 .hero {
     height: 100vh;
-    background-image: url("../images/002-bg.jpg");
+    background-image: url("../images/background/hero-bg-main.jpg");
     background-position: 30% 5%;
     display: flex;
     align-items: center;
@@ -299,6 +294,28 @@ section, .contact-section {
     font-weight: 200;
 }
 
+/* ===================SUITES SECTION================= */
+.suites {
+    flex-direction: column;
+    align-items: center;
+}
+
+.browse-suites-btn {
+    background-color: #199fff;
+    color: #fff;
+    border: 1px solid;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 1.5rem;
+    font-weight: 500;
+    margin-top: 4rem;
+}
+
+.browse-suites-btn:hover {
+    background-color: gold;
+    color: #333;
+}
+
 /* ===================FLEET SECTION================= */
 .fleet {
     flex-direction: column;
@@ -307,7 +324,7 @@ section, .contact-section {
 
 .browse-fleet-btn {
     background-color: #199fff;
-    color: #333;
+    color: #fff;
     border: 1px solid;
     border-radius: 8px;
     text-decoration: none;
@@ -318,47 +335,21 @@ section, .contact-section {
 
 .browse-fleet-btn:hover {
     background-color: gold;
-}
-
-/* ===================CONTACT SECTION================= */
-.contact-section .info {
-    color: #fff;
-}
-
-.contact-section .info h1 {
-    font-size: 4rem;
-}
-
-.contact-section .info p {
-    font-size: 1.5rem;
-    max-width: 70%;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
+    color: #333;
 }
 
 /* ===================PARALLAX BACKGROUND==================== */
 .bg1 {
-    background-image: url("../images/003-bg.jpg");
+    background-image: url("../images/background/paralax-bg-001.jpg");
 }
 
 .bg2 {
-    background-image: url("../images/fleet/bmw/001.jpg");
+    background-image: url("../images/background/paralax-bg-002.jpg");
 }
 
 .contact-section {
     height: 100vh;
-    background-image: url("../images/001_bg.jpg");
+    background-image: url("../images/background/paralax-bg-003.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -430,7 +421,7 @@ footer {
 
 .contact-form .send-btn {
     float: right;
-    background: linear-gradient(to right, #c33764, #1d2671);
+    background: #0582e3;
     color: #fff;
     border: none;
     width: 120px;
@@ -446,29 +437,26 @@ footer {
 }
 
 .contact-form .send-btn:hover {
-    background: #0582e3;
-    /* background: #07f92f; */
+    background-color: gold;
+    color: #333;
 }
 
-/* ==================MEDIA QUERIES================== */
-@media screen and (max-width: 1100px) {
-    section {
-        padding: 30px 50px;
-        font-size: 0.9em;
-    }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
 
 @media screen and (max-width: 900px) {
-    .logo img {
-        width: 100px;
-    }
-
-    .nav-bar .logo {
-        left: 200px;
-    }
-
     header .nav-bar {
-        padding: 2.5rem;
+        padding: 25px 30px;
     }
 
     section {
@@ -586,5 +574,11 @@ footer {
 
     .contact-form .text-box {
         width: 100%;
+    }
+}
+
+@media screen and (max-width:529px) {
+    .text-span-4 {
+        display: block;
     }
 }
