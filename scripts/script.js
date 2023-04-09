@@ -70,7 +70,7 @@ var swiper2 = new Swiper(".bg-slider", {
 */
 
 //==================SWIPER SLIDER=================
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".bg-slider-thumbs", {
     loop: true,
     spaceBetween: 10,
     slidesPerView: 4,
@@ -78,7 +78,7 @@ var swiper = new Swiper(".mySwiper", {
     watchSlidesProgress: true,
 });
 
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".bg-slider", {
     loop: true,
     spaceBetween: 10,
     navigation: {
