@@ -64,14 +64,10 @@
     color: #fff;
 }
 
-.bg-slider-thumbs {
-    justify-content: center;
-    text-align: center;
-}
-
 /* =============================HOME============================ */
 .home {
     min-height: 100vh;
+    position: relative;
 }
 
 /* =============================BACKGROUND SLIDER============================ */
@@ -127,20 +123,20 @@
 }
 
 .swiper-slide .text-content .title span {
-    font-size: 0.3em;
-    font-weight: 300;
+    font-size: 0.6em;
+    font-weight: 400;
 }
 
 .swiper-slide .text-content p {
     max-width: 700px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    text-shadow: var(--text-shadow);
+    text-shadow: #000;
     padding: 20px;
     border-radius: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: var(--box-shadow);
+    box-shadow: grey;
     transform: translateX(-80px);
     opacity: 0;
 }
@@ -162,9 +158,9 @@
     font-size: 1em;
     font-weight: 500;
     padding: 8px 25px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
     border-radius: 10px;
     cursor: pointer;
     transform: translateX(50px);
@@ -188,45 +184,42 @@
     transform: translateX(9px);
 }
 
-.dark-layer::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.2);
-}
-
 .bg-slider-thumbs {
+    justify-content: center;
+    text-align: center;
     z-index: 777;
     position: absolute;
-    bottom: 7em;
+    display: flex;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.3s ease;
 }
 
+.about {
+    display: block;
+    padding: 3rem;
+}
+
 .thumbs-container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
     padding: 10px 3px;
     border-radius: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: #000;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(1px);
 }
 
 .thumbs-container img {
-    width: 50px;
-    height: 35px;
-    margin: 0 5px;
+    width: 1rem;
+    margin: 0 1rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .swiper-slide-thumb-active {
-    border: 1px solid var(--white-color);
+    border: 1px solid #fff;
 }
 
 @media screen and (max-width: 900px) {
