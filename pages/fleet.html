@@ -37,6 +37,10 @@
         >
         <link
             rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
+        <link
+            rel="stylesheet"
             href="../styles/index.css"
         >
         <link
@@ -48,34 +52,34 @@
 
     <body>
         <header>
-      <div class="nav-bar">
-         <a
-                href="#hero"
-                class="logo-title"
-        > <img
-                src="../images/logos/fleet-logo.png"
-                alt="fleet-logo"
-        ></a>
-        <a class="logo"><img
-                src="../images/logos/fleet-logo.png"
-                alt="fleet-logo"
-        ></a>
-        <div class="navigation">
-          <div class="nav-items">
-            <i class="uil uil-multiply nav-close-btn"></i>
-            <a href="../"><i class="uil uil-spade"></i></i>Home</a>
-            <a href="#about"><i class="uil uil-info"></i></i>About</a>
-            <a href="../pages/suites.html"><i class="uil uil-home"></i>Suites</a>
-            <a href="../pages/fleet.html"><i class="uil uil-car-sideview"></i></i>Fleet</a>
-            <a href="#contact"><i class="uil uil-envelope"></i></i>Contact</a>
-          </div>
-        </div>
-        <i class="uil uil-apps nav-menu-btn"></i>
-      </div>
-      <div class="scroll-indicator-container">
-        <div class="scroll-indicator-bar"></div>
-      </div>
-    </header>
+            <div class="nav-bar">
+                <a
+                    href="#hero"
+                    class="logo-title"
+                > <img
+                        src="../images/logos/fleet-logo.png"
+                        alt="fleet-logo"
+                    ></a>
+                <a class="logo"><img
+                        src="../images/logos/fleet-logo.png"
+                        alt="fleet-logo"
+                    ></a>
+                <div class="navigation">
+                    <div class="nav-items">
+                        <i class="uil uil-multiply nav-close-btn"></i>
+                        <a href="../"><i class="uil uil-spade"></i></i>Home</a>
+                        <a href="#about"><i class="uil uil-info"></i></i>About</a>
+                        <a href="../pages/suites.html"><i class="uil uil-home"></i>Suites</a>
+                        <a href="../pages/fleet.html"><i class="uil uil-car-sideview"></i></i>Fleet</a>
+                        <a href="#contact"><i class="uil uil-envelope"></i></i>Contact</a>
+                    </div>
+                </div>
+                <i class="uil uil-apps nav-menu-btn"></i>
+            </div>
+            <div class="scroll-indicator-container">
+                <div class="scroll-indicator-bar"></div>
+            </div>
+        </header>
 
         <div
             class="parallax_bg hero"
@@ -103,27 +107,34 @@
             <h2>
                 Featured Rentals
             </h2>
-           
+
             <ul>
-                
                 <li class="card">
-                    <div class="carousel" data-carousel>
-                        <button class="carousel-btn prev" data-carousel-button="prev"><i class="uil uil-angle-left-b"></i></button>
-                        <button class="carousel-btn next" data-carousel-button="next"><i class="uil uil-angle-right"></i></button>
-                        <ul data-slides>
-                            <li class="slide" data-active>
-                                <img src="../images/fleet/bmw/001.jpg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/bmw/108.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/bmw/109.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/bmw/110.jpeg" alt="">  
-                            </li>
-                        </ul>
+                    <div
+                        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper mySwiper"
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/bmw/001.jpg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/bmw/108.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/bmw/109.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/bmw/110.jpeg"
+                                    alt=""
+                                ></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                     <div class="item-content">
                         <div>
@@ -136,42 +147,52 @@
                             <a
                                 href="#"
                                 target="_blank"
-                            >Explore &#x2192</a>
+                            >Check Availability</a>
                         </div>
                     </div>
                 </li>
-
                 <li class="card">
-                    <div class="carousel" data-carousel>
-                        <button class="carousel-btn prev" data-carousel-button="prev"><i class="uil uil-angle-left-b"></i></button>
-                        <button class="carousel-btn next" data-carousel-button="next"><i class="uil uil-angle-right"></i></button>
-                        <ul data-slides>
-                            <li class="slide" data-active>
-                                <img src="../images/fleet/Camero/100.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/Camero/102.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/Camero/103.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/Camero/104.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/Camero/105.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/Camero/106.jpeg" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/Camero/107.jpeg" alt="">  
-                            </li>
-                        </ul>
+                    <div
+                        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper mySwiper"
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                     src="../images/fleet/Camero/100.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/Camero/102.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/Camero/103.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/Camero/104.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/Camero/105.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/Camero/106.jpeg"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/Camero/107.jpeg"
+                                    alt=""
+                                ></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                     <div class="item-content">
                         <div>
-                            <h2>2001 Camero</h2>
+                            <h2>2019 Camero</h2>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </p>
@@ -180,29 +201,36 @@
                             <a
                                 href="#"
                                 target="_blank"
-                            >Explore &#x2192</a>
+                            >Check Availability</a>
                         </div>
                     </div>
                 </li>
-
                 <li class="card">
-                    <div class="carousel" data-carousel>
-                        <button class="carousel-btn prev" data-carousel-button="prev"><i class="uil uil-angle-left-b"></i></button>
-                        <button class="carousel-btn next" data-carousel-button="next"><i class="uil uil-angle-right"></i></button>
-                        <ul data-slides>
-                            <li class="slide" data-active>
-                                <img src="../images/fleet/mercedez/016.png" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/mercedez/018.png" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/mercedez/019.png" alt="">  
-                            </li>
-                            <li class="slide">
-                                <img src="../images/fleet/mercedez/020.png" alt="">  
-                            </li>
-                        </ul>
+                    <div
+                        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper mySwiper"
+                    >
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img
+                                     src="../images/fleet/mercedez/016.png"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/mercedez/018.png"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/mercedez/019.png"
+                                    alt=""
+                                ></div>
+                            <div class="swiper-slide"><img
+                                    src="../images/fleet/mercedez/020.png"
+                                    alt=""
+                                ></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                     <div class="item-content">
                         <div>
@@ -215,11 +243,10 @@
                             <a
                                 href="#"
                                 target="_blank"
-                            >Explore &#x2192</a>
+                            >Check Availability</a>
                         </div>
                     </div>
                 </li>
-
             </ul>
         </section>
 
@@ -229,7 +256,8 @@
         >
 
             <div class="contact-info">
-                <div><i class="fa-solid fa-location-dot"></i>Address, City, Country</div>
+                <div> <a href="https://www.instagram.com/ace.fleet/"><i class="uil uil-instagram"></i>Ace Fleet Instagram</a> </div>
+                <div><i class="fa-solid fa-location-dot"></i>121 Tortuga Bend, Orlando, Florida</div>
                 <div><i class="fa-regular fa-envelope"></i>aceluxrentals@ace-suites.com</div>
                 <div><i class="fa-solid fa-phone-flip"></i>+1 321-368-4626</div>
                 <div><i class="fa-regular fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
@@ -246,7 +274,7 @@
                         id="name"
                         name="name"
                         class="text-box"
-                        placeholder="Your Name"
+                        placeholder="What's Your Name?"
                         required
                     >
                     <input
@@ -254,14 +282,14 @@
                         id="email"
                         name="email"
                         class="text-box"
-                        placeholder="Your Email"
+                        placeholder="What's Your Email?"
                         required
                     >
                     <textarea
                         name="message"
                         class="message"
                         rows="5"
-                        placeholder="Your Message"
+                        placeholder="Tell Us Which Vehicle and Reserve Your Date!"
                         required
                     ></textarea>
                     <input
@@ -279,7 +307,13 @@
             </div>
         </div>
 
-        <footer><p>ACE Suites LLC&copy; <script>document.write(new Date().getFullYear());</script></p></footer>
+        <footer>
+            <p>ACE Suites LLC&copy;
+                <script>document.write(new Date().getFullYear());</script>
+            </p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="../scripts/swiper-bundle.min.js"></script>
         <script src="../scripts/script.js"></script>
         <script src="../scripts/fleet.js"></script>
     </body>
