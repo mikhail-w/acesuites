@@ -10,7 +10,6 @@ if (galleryImages) {
             let getImgUrlPos = getFullImgUrl.split("/images/suites/family/");
             let setNewImgUrl = getImgUrlPos[1].replace('")', '')
 
-            // alert(setNewImgUrl)
             getLatestOpenedImg = index + 1;
 
             let container = document.body;
@@ -25,25 +24,25 @@ if (galleryImages) {
             newImg.setAttribute("id", "current-img");
 
             newImg.onload = function () {
-                let imgWidth = this.width;
-                let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
+                // let imgWidth = this.width;
+                // let calcImgToEdge = ((windowWidth - imgWidth) / 2) - 80;
 
                 let newNextBtn = document.createElement("a");
-                let btnNextText = document.createTextNode("Next");
+                let btnNextText = document.createTextNode(">");
                 newNextBtn.appendChild(btnNextText);
                 container.appendChild(newNextBtn);
                 newNextBtn.setAttribute("class", "img-btn-next");
                 newNextBtn.setAttribute("onclick", "changeImg(1)");
-                rightEdge = calcImgToEdge - 10;
-                newNextBtn.style.cssText = "right: " + rightEdge + "px;";
+                // rightEdge = calcImgToEdge - 10;
+                // newNextBtn.style.cssText = "right: " + rightEdge + "px;";
 
                 let newPrevBtn = document.createElement("a");
-                let btnPrevText = document.createTextNode("Prev");
+                let btnPrevText = document.createTextNode("<");
                 newPrevBtn.appendChild(btnPrevText);
                 container.appendChild(newPrevBtn);
                 newPrevBtn.setAttribute("class", "img-btn-prev");
                 newPrevBtn.setAttribute("onclick", "changeImg(0)");
-                newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;";
+                // newPrevBtn.style.cssText = "left: " + calcImgToEdge + "px;";
 
             }
         }

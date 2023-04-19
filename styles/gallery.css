@@ -154,16 +154,23 @@
 }
 
 /* Next image*/
-.img-btn-next, .img-btn-prev {
+.img-btn-prev, .img-btn-next {
     display: block;
     padding: 6px 10px;
     border-radius: 4px;
     background-color: #111;
     position: fixed;
-    top: 48vh;
+    top: 50vh;
     z-index: 600;
     color: #fff;
-    text-transform: uppercase;
+}
+
+.img-btn-next {
+    right: 1vw;
+}
+
+.img-btn-prev {
+    left: 1vw;
 }
 
 .img-btn-next, .img-btn-prev:hover {
