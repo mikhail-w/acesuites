@@ -37,6 +37,10 @@
         >
         <link
             rel="stylesheet"
+            href="../styles/lightbox.css"
+        >
+        <link
+            rel="stylesheet"
             href="../styles/swiper-bundle.min.css"
         >
         <link
@@ -72,9 +76,9 @@
                     <div class="nav-items">
                         <i class="uil uil-multiply nav-close-btn"></i>
                         <a href="../"><i class="uil uil-spade"></i></i>Home</a>
-                        <a href="#about"><i class="uil uil-info"></i></i>About</a>
-                        <a href="/pages/suites.html"><i class="uil uil-home"></i>Suites</a>
-                        <a href="/pages/fleet.html"><i class="uil uil-car-sideview"></i></i>Fleet</a>
+                        <a href="../#about"><i class="uil uil-info"></i></i>About</a>
+                        <a href="../pages/suites.html"><i class="uil uil-home"></i>Suites</a>
+                        <a href="../pages/fleet.html"><i class="uil uil-car-sideview"></i></i>Fleet</a>
                         <a href="#contact"><i class="uil uil-envelope"></i></i>Contact</a>
                     </div>
                 </div>
@@ -84,14 +88,13 @@
                 <div class="scroll-indicator-bar"></div>
             </div>
         </header>
-        </head>
 
         <body>
             <!-- Swiper -->
             <section class="home">
                 <!-- Demo styles -->
                 <div
-                    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                    style="--swiper-navigation-color: #ffffff; --swiper-pagination-color: #fff"
                     class="swiper bg-slider"
                 >
                     <div class="swiper-wrapper">
@@ -133,42 +136,180 @@
 
                 <div class="bg-slider-thumbs">
                     <div class="swiper-wrapper thumbs-container">
-                            <img class="swiper-slide" src="../images/suites/family-002.jpg" />
-                            <img class="swiper-slide" src="../images/suites/single-001.jpg" />
-                            <img class="swiper-slide" src="../images/suites/camper-001.jpg"  />
+                        <img
+                            class="swiper-slide"
+                            src="../images/suites/family-002.jpg"
+                        />
+                        <img
+                            class="swiper-slide"
+                            src="../images/suites/single-001.jpg"
+                        />
+                        <img
+                            class="swiper-slide"
+                            src="../images/suites/camper-001.jpg"
+                        />
                     </div>
                 </div>
             </section>
 
-            <section class="about section">
-                <h2>Seasons of the year</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum suscipit praesentium omnis obcaecati, tempora unde? Modi eius repudiandae architecto distinctio,
-                    cupiditate sapiente iste exercitationem alias minus nesciunt. Incidunt beatae voluptatem quis voluptates ea delectus, dolorum fuga repellendus accusantium quidem
-                    quibusdam similique voluptate culpa error consectetur perferendis inventore ad corporis assumenda! Deserunt, fugit eius. Quibusdam tempora amet quis, doloribus
-                    possimus harum animi, voluptatibus qui, eum dolorum dolore hic commodi veritatis ipsam dolorem nostrum sint? Earum quas obcaecati iste saepe porro exercitationem,
-                    neque ipsa expedita ex ad dolorem, veniam facere. Quis, quisquam obcaecati unde, inventore nihil eligendi alias enim in ducimus, quia laborum id. Corporis numquam
-                    officiis molestiae doloribus! Possimus delectus mollitia, dignissimos hic amet qui? Fugiat voluptatibus a corporis delectus praesentium aliquid accusantium quis
-                    obcaecati inventore laborum quae voluptatum enim odio totam ducimus, ut voluptate repellat neque deleniti ad eius! Necessitatibus exercitationem eligendi veniam
-                    maiores dolore voluptatibus tempora veritatis temporibus nihil sequi voluptate eos, magni sapiente illo deserunt nam facilis dolor, porro rerum dignissimos fugit
-                    nisi. Dolorem cum eaque est debitis repudiandae consequatur, non harum. Magnam, nesciunt amet corrupti voluptas fugiat non quidem mollitia doloribus, aliquid
-                    voluptatem corporis facilis distinctio maiores iste, quas earum in accusamus exercitationem praesentium vel voluptatibus?</p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic eum suscipit praesentium omnis obcaecati, tempora unde? Modi eius repudiandae architecto distinctio,
-                    cupiditate sapiente iste exercitationem alias minus nesciunt. Incidunt beatae voluptatem quis voluptates ea delectus, dolorum fuga repellendus accusantium quidem
-                    quibusdam similique voluptate culpa error consectetur perferendis inventore ad corporis assumenda! Deserunt, fugit eius. Quibusdam tempora amet quis, doloribus
-                    possimus harum animi, voluptatibus qui, eum dolorum dolore hic commodi veritatis ipsam dolorem nostrum sint? Earum quas obcaecati iste saepe porro exercitationem,
-                    neque ipsa expedita ex ad dolorem, veniam facere. Quis, quisquam obcaecati unde, inventore nihil eligendi alias enim in ducimus, quia laborum id. Corporis numquam
-                    officiis molestiae doloribus! Possimus delectus mollitia, dignissimos hic amet qui? Fugiat voluptatibus a corporis delectus praesentium aliquid accusantium quis
-                    obcaecati inventore laborum quae voluptatum enim odio totam ducimus, ut voluptate repellat neque deleniti ad eius! Necessitatibus exercitationem eligendi veniam
-                    maiores dolore voluptatibus tempora veritatis temporibus nihil sequi voluptate eos, magni sapiente illo deserunt nam facilis dolor, porro rerum dignissimos fugit
-                    nisi. Dolorem cum eaque est debitis repudiandae consequatur, non harum. Magnam, nesciunt amet corrupti voluptas fugiat non quidem mollitia doloribus, aliquid
-                    voluptatem corporis facilis distinctio maiores iste, quas earum in accusamus exercitationem praesentium vel voluptatibus?</p>
+            <section class="gallery-section">
+                <h2>Family Suite Gallery</h2>
+                <div class="container">
+                    <div class="gallery">
+                        <a
+                            href="../images/suites/family/family-01.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-01.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-02.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-02.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-03.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-03.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-04.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-04.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-05.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-05.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-06.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-06.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-07.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-07.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-08.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-08.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-09.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-09.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-010.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-010.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-011.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-011.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-012.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-012.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-013.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-013.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-014.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-014.png"
+                                alt="image"
+                            >
+                        </a>
+                        <a
+                            href="../images/suites/family/family-015.png"
+                            data-lightbox="family-suite"
+                            data-title="Caption"
+                        >
+                            <img
+                                src="../images/suites/family/family-015.png"
+                                alt="image"
+                            >
+                        </a>
+                    </div>
+                </div>
 
-     
             </section>
-
-
             <div
                 class="parallax_bg contact-section"
                 id="contact"
@@ -233,6 +374,7 @@
             <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
             <script src="../scripts/swiper-bundle.min.js"></script>
             <script src="../scripts/script.js"></script>
+            <script src="../scripts/lightbox-plus-jquery.js"></script>
         </body>
 
 </html>

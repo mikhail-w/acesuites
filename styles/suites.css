@@ -72,7 +72,7 @@
 
 /* =============================BACKGROUND SLIDER============================ */
 .bg-slider {
-    z-index: 777;
+    z-index: 300;
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -187,18 +187,13 @@
 .bg-slider-thumbs {
     justify-content: center;
     text-align: center;
-    z-index: 777;
+    z-index: 350;
     position: absolute;
     display: flex;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.3s ease;
-}
-
-.about {
-    display: block;
-    padding: 3rem;
 }
 
 .thumbs-container {
@@ -220,6 +215,33 @@
 
 .swiper-slide-thumb-active {
     border: 1px solid #fff;
+}
+
+/* Gallery Section */
+.gallery-section h2 {
+    grid-area: gallery-h2;
+    color: rgb(59, 65, 64);
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 8%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.gallery img {
+    width: 100%;
 }
 
 @media screen and (max-width: 900px) {
