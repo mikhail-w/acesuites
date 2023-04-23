@@ -16,7 +16,7 @@ body {
 
 /* =====================HEADER AND NAVBAR======================= */
 header {
-    z-index: 700;
+    z-index: 650;
     position: fixed;
     top: 0;
     left: 0;
@@ -197,7 +197,7 @@ h1 {
 }
 
 .hero:before {
-    z-index: 690;
+    z-index: 640;
     content: '';
     position: absolute;
     width: 100%;
@@ -208,7 +208,7 @@ h1 {
 }
 
 .arrow {
-    z-index: 691;
+    z-index: 641;
     text-decoration: none;
     color: white;
     font-size: 3.5rem;
@@ -500,7 +500,7 @@ footer {
     }
 
     .navigation {
-        z-index: 700;
+        z-index: 655;
         position: fixed;
         background: rgba(0, 0, 0, 0.5);
         width: 100%;
