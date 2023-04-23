@@ -298,6 +298,25 @@
     cursor: pointer;
 }
 
+.lb-number {
+    display: block;
+    clear: left;
+    padding-bottom: 1em;
+    font-size: 12px;
+    color: #999999;
+}
+
+.close-btn {
+    z-index: 910;
+    position: fixed;
+    top: 54px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/lightbox/close.png) top right no-repeat;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 900px) {
     .swiper-slide .text-content {
         position: absolute;
@@ -307,5 +326,9 @@
         color: #fff;
         margin: 0 45px;
         transform: 0.3s ease;
+    }
+
+    .close-btn {
+        top: 160px;
     }
 }
