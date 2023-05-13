@@ -12,7 +12,7 @@ if (galleryImages) {
     console.log(elements)
 
     galleryImages.forEach(function (image, index) {
-        image.onclick = function () {
+        image.addEventListener('click', function () {
             let getFullImgUrl = image.currentSrc;
 
             console.log(image.currentSrc);
@@ -77,7 +77,7 @@ if (galleryImages) {
 
             }
 
-        }
+        });
     });
 }
 

@@ -329,7 +329,9 @@
         margin: 0 45px;
         transform: 0.3s ease;
     }
+}
 
+@media screen and (max-width: 600px) {
     .close-btn {
         top: 160px;
     }
