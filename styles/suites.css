@@ -245,6 +245,10 @@
     cursor: pointer;
 }
 
+.item:hover {
+    filter: brightness(80%);
+}
+
 /* ======================Popup window when clicked=========================*/
 .img-window {
     width: 100vw;
@@ -324,7 +328,7 @@
         position: absolute;
         text-align: left;
         font-size: .7rem;
-        top: 55%;
+        top: 50%;
         color: #fff;
         margin: 0 45px;
         transform: 0.3s ease;
