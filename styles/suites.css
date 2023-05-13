@@ -240,14 +240,16 @@
 }
 
 .gallery img {
-    width: 100%;
+    width: 300px;
+    height: 200px;
+    cursor: pointer;
 }
 
 /* ======================Popup window when clicked=========================*/
 .img-window {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     top: 0;
     left: 0;
@@ -270,7 +272,8 @@
     border-radius: 4px;
     background-color: #111;
     position: fixed;
-    top: 50vh;
+    top: 33vh;
+    padding: 18vh 0px;
     z-index: 910;
     color: #fff;
 }
