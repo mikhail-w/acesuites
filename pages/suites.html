@@ -59,7 +59,7 @@
                 <!-- Demo styles -->
                 <div style="--swiper-navigation-color: #ffffff; --swiper-pagination-color: #fff" class="swiper bg-slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide suite-list">
                             <img src="../images/suites/family-002.jpg" />
                             <div class="text-content">
                                 <h2 class="title">Family <span>Suite</span></h2>
@@ -69,7 +69,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide suite-list">
                             <img src="../images/suites/single-001.jpg" />
                             <div class="text-content">
                                 <h2 class="title">Single <span>Suite</span></h2>
@@ -78,10 +78,9 @@
                                 <a href="https://abnb.me/p3x9nz4FBxb">
                                     <button class="read-btn">Book Now<i class="uil uil-arrow-right"></i></button>
                                 </a>
-
                             </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide suite-list">
                             <img src="../images/suites/camper-001.jpg" />
                             <div class="text-content">
                                 <h2 class="title">Camping <span>Suite</span></h2>
@@ -92,8 +91,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div onclick="getSuite('next')" class="swiper-button-next"></div>
+                    <div onclick="getSuite('prev')" class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
                 </div>
 
                 <div class="bg-slider-thumbs">
@@ -106,85 +107,6 @@
             </section>
 
             <section class="gallery-section">
-                <!-- <div class="container family-gallery">
-                    <h2>Family Suite Gallery</h2>
-                    <div class="gallery">
-                        <img
-                            src="../images/suites/family/family-01.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-02.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-03.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-04.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-05.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-06.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-07.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-08.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-09.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-010.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-011.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-012.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-013.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-014.png"
-                            alt="image"
-                        >
-
-                        <img
-                            src="../images/suites/family/family-015.png"
-                            alt="image"
-                        >
-                    </div>
-                </div> -->
                 <div class="container-fluid family-gallery">
                     <h2>Family Suite Gallery</h2>
                     <div class="row mt-4">
@@ -407,8 +329,13 @@
             </div>
 
             <footer>
-                <p>ACE Suites LLC&copy;
-                    <script>document.write(new Date().getFullYear());</script>
+                <p>ACE Suites LLC
+                <div>
+                    &copy;
+                    <span id="copyright">
+                        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                    </span>
+                </div>
                 </p>
             </footer>
             <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

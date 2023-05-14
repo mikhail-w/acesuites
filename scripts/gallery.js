@@ -1,117 +1,47 @@
-let galleryImages = document.querySelectorAll(".gallery > img");
-let elements = Array.from(galleryImages);
-let getLatestOpenedImg;
-let windowWidth = window.innerWidth;
-let calcNewImg;
-let rootFolder;
-
-let curGallery = document.querySelectorAll('active');
-
-if (galleryImages) {
-
-    console.log(elements)
-
-    galleryImages.forEach(function (image, index) {
-        image.addEventListener('click', function () {
-            let getFullImgUrl = image.currentSrc;
-
-            console.log(image.currentSrc);
-
-            let getImgUrlPos = getFullImgUrl.split("/suites");
-
-            console.log(getImgUrlPos);
-
-            let test = getImgUrlPos[1].split('"');
-            let setNewImgUrl = test[0];
-
-            console.log(setNewImgUrl);
-
-            getLatestOpenedImg = index + 1;
-
-            //Further breakdown image path to isolate suite root-folder and image title
-            let folderPath = setNewImgUrl.split("/");
-            rootFolder = folderPath[1];
-            let imageTitle = folderPath[2];
-
-            console.log("Root Folder: " + rootFolder);
-            console.log("Image Title: " + imageTitle);
-
-            let imgNameStart = imageTitle.split('0');
-
-            console.log(imgNameStart);
-
-            //Create image window popup, arrows and close button
-            let container = document.body;
-            let newImgWindow = document.createElement("div");
-            container.appendChild(newImgWindow);
-            newImgWindow.setAttribute("class", "img-window");
-            newImgWindow.setAttribute("onclick", "closeImg()");
-
-            let newImg = document.createElement("img");
-            newImgWindow.appendChild(newImg);
-            newImg.setAttribute("src", "../images/suites/" + rootFolder + "/" + imageTitle);
-            newImg.setAttribute("id", "current-img");
-
-            newImg.onload = function () {
-
-                let newNextBtn = document.createElement("a");
-                let btnNextText = document.createTextNode("");
-                newNextBtn.appendChild(btnNextText);
-                container.appendChild(newNextBtn);
-                newNextBtn.setAttribute("class", "img-btn-next");
-                newNextBtn.setAttribute("onclick", "changeImg(1)");
-
-                let newPrevBtn = document.createElement("a");
-                let btnPrevText = document.createTextNode("");
-                newPrevBtn.appendChild(btnPrevText);
-                container.appendChild(newPrevBtn);
-                newPrevBtn.setAttribute("class", "img-btn-prev");
-                newPrevBtn.setAttribute("onclick", "changeImg(0)");
-
-                let closeBtn = document.createElement("a");
-                let closeBtnText = document.createTextNode("");
-                closeBtn.appendChild(closeBtnText);
-                container.appendChild(closeBtn);
-                closeBtn.setAttribute("class", "close-btn");
-                closeBtn.setAttribute("onclick", "closeImg()");
-
-            }
-
-        });
-    });
-}
-
-function closeImg() {
-    document.querySelector(".img-window").remove();
-    document.querySelector(".img-btn-next").remove();
-    document.querySelector(".img-btn-prev").remove();
-    document.querySelector(".close-btn").remove();
-}
-
-function changeImg(changeDir) {
-    document.querySelector("#current-img").remove();
-
-    let getImgWindow = document.querySelector(".img-window");
-    let newImg = document.createElement("img");
-    getImgWindow.appendChild(newImg);
-
-
-    if (changeDir === 1) {
-        calcNewImg = getLatestOpenedImg + 1;
-        if (calcNewImg > galleryImages.length) {
-            calcNewImg = 1;
-        }
-    }
-    else if (changeDir === 0) {
-        calcNewImg = getLatestOpenedImg - 1;
-        if (calcNewImg < 1) {
-            calcNewImg = galleryImages.length;
-        }
+function getSuite(val) {
+    let currSuite;
+    let temp;
+    // console.log("Val: " + val);
+    if (val === "prev") {
+        currSuite = document.getElementsByClassName("swiper-slide-prev");
+    } else {
+        currSuite = document.getElementsByClassName("swiper-slide-next");
     }
 
-    newImg.setAttribute("src", "../images/suites/" + rootFolder + "/" + rootFolder + "-0" + calcNewImg + ".png");
-    newImg.setAttribute("id", "current-img");
-    getLatestOpenedImg = calcNewImg;
-    console.log("Image Number: " + calcNewImg);
-
+    // console.log(currSuite[0].outerText);
+    if (document.getElementById("status") != null) {
+        var idPost = document.getElementById("status").innerHTML;
+        temp = currSuite[0].outerText.split(' ');
+    }
+    console.log(temp);
+    let suiteName = temp[0];
+    console.log("suiteName: " + suiteName);
 }
+// function getSuite(val) {
+//     let currSuite = document.getElementsByClassName("swiper-slide-thumb-active");
+//     console.log(currSuite);
+//     console.log(currSuite.item(0).currentSrc);
+// }
+
+
+// let thumbs = document.getElementsByClassName("thumbs-container");
+// let x = thumbs[0].getElementsByTagName("img");
+// let test = Array.from(x);
+// let substring;
+
+// test.forEach(myfunction)
+
+// function myfunction(item) {
+//     // substring = getSubstring(item.src, 'suites/', '-');
+//     substring = item.src.split("/images/suites/");
+//     console.log(substring[1].split("-")[0]);
+//     // console.log(item.src);
+// }
+
+// function getSubstring(str, start, end) {
+//     char1 = str.indexOf(start) + 1;
+//     char2 = str.lastIndexOf(end);
+//     return str.substring(char1, char2);
+// }
+
+
