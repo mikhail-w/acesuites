@@ -1,61 +1,52 @@
-let suiteCollection = document.getElementsByClassName('suite-item');
-let suitesListArray = Array.from(suiteCollection);
-let currSuite = document.getElementsByClassName('swiper-slide-active');
-
-let suiteName = currSuite[0].outerText.split(' ')[0];
-let activeSuite = document.getElementsByClassName('active-gallery');
-let galArray = Array.from(activeSuite);
-const suitesList2 = [];
-const currentSuite = ['Family',];
+let suitesListArray = Array.from(document.getElementsByClassName('suite-item'));
+let gallerySectionArray = Array.from(document.getElementsByClassName('gallery-section'));
+let galleryImageArray;
 let currIndex = 0;
+let selectedSuiteName;
+let hrefPath;
+let srcPath;
 
-// console.log(suiteCollection);
-// console.log(currSuite);
-console.log(suitesListArray);
-// console.log(currSuite[1].currentSrc);
-// console.log(Array.from(suiteCollection));
-
-//Convert the HTMLCollection to an Array and display the class list for ech element
-function listClass(suitesListArray) {
-    suitesListArray.forEach((element, index) => {
-        suiteName = element.outerText.split(' ')[0];
-        suitesList2[index] = suiteName;
-        console.log(index, suiteName);
-
-        if (element.classList.contains('swiper-slide-active')) {
-            currSuite[index] = suiteName;
-        } else {
-        }
-    });
-    console.log(' ');
-
-}
-
-
+//This function identifies the currently selected suite
 function getSuite(val) {
-    if (val === "prev") {
-        if (currIndex === 0) {
-            currIndex = 3
+    if (isNaN(val)) {
+        if (val === "prev") {
+            if (currIndex === 0) {
+                currIndex = 3
+            } else {
+                currIndex -= 1;
+            }
         } else {
-            currIndex -= 1;
+            if (currIndex === 3) {
+                currIndex = 0;
+            } else {
+                currIndex += 1;
+            }
         }
-        // console.log("currIndex: " + currIndex);
-
     } else {
-        if (currIndex === 3) {
-            currIndex = 0;
-        } else {
-            currIndex += 1;
-        }
+        currIndex = val;
     }
-    console.log(suitesListArray[currIndex].getElementsByTagName('img')[0].currentSrc);
+    //Change Suite Gallery Title
+    selectedSuiteName = suitesListArray[currIndex].outerText.split(' ')[0];
+    galleryImageArray = Array.from(gallerySectionArray[0].getElementsByTagName('a'));
+    document.getElementById("gallery-title").innerText = selectedSuiteName + " Suite Gallery";
+
+
+    galleryImageArray.forEach((item, index) => {
+        hrefPath = item.href.split('suites/');
+        srcPath = item.childNodes[1].src.split('suites/');
+        // console.log(item);
+        // console.log(index, "HREF: " + item.href);
+        // console.log(index, "Image Source: " + item.childNodes[1].src);
+        // console.log(srcPath);
+        // console.log(hrefPath[0]);
+        let newPath = hrefPath[0] + "suites/" + selectedSuiteName.toLowerCase() + "/" + selectedSuiteName.toLowerCase() + "-0" + (index + 1) + ".jpg";
+        item.href = newPath;
+        item.childNodes[1].src = srcPath[0] + "suites/" + selectedSuiteName.toLowerCase() + "/" + selectedSuiteName.toLowerCase() + "-0" + (index + 1) + ".jpg";
+        // console.log(newPath);
+
+    })
 }
 
-
-listClass(suitesListArray);
-// getSuiteName();
-// console.log('suitesList2: ' + suitesList2);
-// console.log('currentSuite: ' + currentSuite);
 
 
 
