@@ -618,7 +618,7 @@ footer {
     }
 }
 
-@media screen and (orientation:landscape) {
+/* @media screen and (orientation:landscape) {
     .hero {
         min-height: 200vh;
     }
@@ -635,4 +635,4 @@ footer {
     .arrow {
         bottom: 395px;
     }
-}
+} */
