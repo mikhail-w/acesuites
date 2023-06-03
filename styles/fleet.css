@@ -8,7 +8,7 @@ html, body {
 }
 
 .hero {
-    background-image: url("../images/background/hero-bg-fleet.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.5)), url("../images/background/hero-bg-fleet.jpg");
     width: 100%;
 }
 
@@ -151,11 +151,10 @@ section {
     width: 120px;
     height: 40px;
     font-size: .7em;
-    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 18px 35px 18px 35px;
+    padding: 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
@@ -166,17 +165,13 @@ section {
     color: #333;
 }
 
-.contact-info {
-    font-size: 1.4rem;
-}
-
 .contact-info a {
     color: #fff;
     text-decoration: none;
 }
 
 .contact-section {
-    background-image: url("../images/fleet/012.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.5)), url("../images/fleet/012.jpg");
 }
 
 @media screen and (max-width: 900px) {
@@ -197,10 +192,15 @@ section {
     }
 
     .contact-info {
-        font-size: 1rem;
+        font-size: .75rem;
     }
 
     .swiper-button-next {
         right: 1.05rem;
+    }
+
+    .swiper-wrapper img {
+        max-width: 100%;
+        object-fit: contain;
     }
 }
