@@ -24,7 +24,9 @@ gesturedZone.addEventListener('touchstart', function (event) {
 
 gesturedZone.addEventListener('touchend', function (event) {
     touchendX = event.changedTouches[0].screenX;
-    getActive();
+    if (Math.abs(touchendX - touchstartX) > 10) {
+        getActive();
+    }
 }, false);
 
 
@@ -48,7 +50,6 @@ function getSuite(val) {
         //If suite item is selected via thumbs-container
         currIndex = val;
     }
-    // console.log("Getsuite Current Index: ", currIndex);
     updateImageGallery();
 
 }
@@ -75,6 +76,7 @@ function getActive() {
 
     currIndex = indexMap.get(srcName);
     console.log("GetActive Current Index: ", currIndex);
+    updateImageGallery();
 }
 
 function updateImageGallery() {
