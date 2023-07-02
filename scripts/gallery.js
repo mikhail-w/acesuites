@@ -60,30 +60,16 @@ function getActive() {
         let curSrc = titleItem.children[0].src.split('/');
         if (titleItem.classList.contains('swiper-slide-active')) {
             srcName = curSrc[curSrc.length - 1].split('-')[0];
-            document.getElementById("gallery-title").innerText = srcName.charAt(0).toUpperCase() + srcName.slice(1) + " Suite Gallery";
+            // document.getElementById("gallery-title").innerText = srcName.charAt(0).toUpperCase() + srcName.slice(1) + " Suite Gallery";
         }
     })
-    // galleryImageArray = Array.from(gallerySectionArray[0].getElementsByTagName('a'));
-    //cycle through all <a> tags and update the href and image src paths
-
-    // galleryImageArray.forEach((item, index) => {
-    //     hrefPath = item.href.split('suites/');
-    //     srcPath = item.childNodes[1].src.split('suites/');
-    //     let newPath = hrefPath[0] + "suites/" + srcName + "/" + srcName + "-0" + (index + 1) + ".jpg";
-    //     item.href = newPath;
-    //     item.childNodes[1].src = srcPath[0] + "suites/" + srcName + "/" + srcName + "-0" + (index + 1) + ".jpg";
-    // })
-
     currIndex = indexMap.get(srcName);
-    console.log("GetActive Current Index: ", currIndex);
     updateImageGallery();
 }
 
 function updateImageGallery() {
     //Change Suite Gallery Title
-    console.log("updateImageGallery Current Index: ", currIndex);
     selectedSuiteName = suitesListArray[currIndex].outerText.split(' ')[0];
-    // console.log("Currently Selected Suite Name:", selectedSuiteName);
     document.getElementById("gallery-title").innerText = selectedSuiteName + " Suite Gallery";
 
     //Update Gallery images to reflect currently selected suite
