@@ -34,7 +34,7 @@ html, body {
 }
 
 /* ==================icons================== */
-.uil {
+.passengers {
     font-size: 1rem;
 }
 
@@ -190,6 +190,36 @@ section {
     background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.5)), url("../images/fleet/012.jpg");
 }
 
+input {
+    margin-top: 5px;
+}
+
+label {
+    color: #fff;
+}
+
+.test {
+    height: 90vh;
+}
+
+#phone {
+    outline: 0;
+    margin-bottom: 10px;
+}
+
+#fmt {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#phone:valid {
+    border-color: green;
+}
+
+#phone:focus:invalid {
+    border-color: red;
+}
+
 @media screen and (max-width: 900px) {
     .cars ul {
         width: 95%;
@@ -213,7 +243,9 @@ section {
     }
 
     .features {
-        justify-content: left;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .label {

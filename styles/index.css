@@ -362,6 +362,10 @@ h1 {
 }
 
 /* =========================CONTACT SECTION====================== */
+input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, input[type="submit"]:focus {
+    background-color: lightblue;
+}
+
 .contact-info {
     color: #fff;
     line-height: 65px;

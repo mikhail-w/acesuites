@@ -91,7 +91,7 @@
                     <div class="features">
                         <div class="car-feature">
                             <div class="icon">
-                                <i class=" uil uil-users-alt"></i>
+                                <i class=" passengers uil uil-users-alt"></i>
                             </div>
                             <div class="label">
                                 5 Passengers
@@ -290,10 +290,20 @@
             </div>
 
             <div class="contact-form">
+
                 <h2>Contact Us</h2>
                 <form action="https://formsubmit.co/eceb09d75463a16c17bafafa5d437c56 " method="POST">
+                    <label for="name">Name:</label>
                     <input type="text" id="name" name="name" class="text-box" placeholder="What's Your Name?" required>
+                    <div class="phone">
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" class="text-box" placeholder="Phone: xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                        <p id="fmt">Format: 123-456-7890</p>
+                    </div>
+                    <label for="email">Email:</label>
                     <input type="email" id="email" name="email" class="text-box" placeholder="What's Your Email?" required>
+                    <label for="dates">Select Dates:</label>
+                    <input onclick="selectDates()" type="text" id="dates" name="rental-period" class="text-box" value="01/01/2023" />
                     <textarea name="message" class="message" rows="5" placeholder="Tell Us Which Vehicle, and Your Reservation  Dates!" required></textarea>
                     <input type="submit" name="submit" class="send-btn" value="Send">
                     <input type="hidden" name="_captcha" value="false">
@@ -301,11 +311,18 @@
             </div>
         </div>
 
+
         <footer>
+
             <p>ACE Suites LLC&copy;
                 <script>document.write(new Date().getFullYear());</script>
             </p>
         </footer>
+        //Date Range Function
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="../scripts/swiper-bundle.min.js"></script>
         <script src="../scripts/script.js"></script>
