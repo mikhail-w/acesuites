@@ -1,17 +1,14 @@
-
-
 //Set new date
 let curDate = document.getElementById('dates').getAttribute('value');
-console.log(curDate);
 date = new Date();
 year = date.getFullYear();
 month = date.getMonth() + 1;
 day = date.getDate();
 curDate = month + "/" + day + "/" + year;
+console.log(curDate);
 
 //Data Range Calender Picker
-$(function selectDates() {
-    console.log("SelectDates Function");
+$(function getDate() {
     $('input[name="daterange"]').daterangepicker({
         opens: 'left'
     }, function (start, end, label) {

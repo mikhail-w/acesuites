@@ -190,7 +190,12 @@ section {
     background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, 0.5)), url("../images/fleet/012.jpg");
 }
 
-input {
+.form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
     margin-top: 5px;
 }
 
@@ -198,8 +203,8 @@ label {
     color: #fff;
 }
 
-.test {
-    height: 90vh;
+form {
+    width: 90%;
 }
 
 #phone {
@@ -210,14 +215,6 @@ label {
 #fmt {
     color: #fff;
     margin-bottom: 20px;
-}
-
-#phone:valid {
-    border-color: green;
-}
-
-#phone:focus:invalid {
-    border-color: red;
 }
 
 @media screen and (max-width: 900px) {

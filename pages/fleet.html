@@ -279,7 +279,7 @@
             </ul>
         </section>
 
-        <div class="parallax_bg contact-section" id="contact">
+        <div class="contact-section" id="contact">
 
             <div class="contact-info">
                 <div> <a href="https://www.instagram.com/ace.fleet/"><i class="uil uil-instagram"></i>Ace Fleet Instagram</a> </div>
@@ -293,18 +293,27 @@
 
                 <h2>Contact Us</h2>
                 <form action="https://formsubmit.co/eceb09d75463a16c17bafafa5d437c56 " method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" class="text-box" placeholder="What's Your Name?" required>
-                    <div class="phone">
+                    <div class="form-element">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="text-box" placeholder="What's Your Name?" required>
+                    </div>
+                    <div class="form-element">
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" class="text-box" placeholder="Phone: xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                        <input type="tel" id="phone" name="phone" class="text-box" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
                         <p id="fmt">Format: 123-456-7890</p>
                     </div>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="text-box" placeholder="What's Your Email?" required>
-                    <label for="dates">Select Dates:</label>
-                    <input onclick="selectDates()" type="text" id="dates" name="rental-period" class="text-box" value="01/01/2023" />
-                    <textarea name="message" class="message" rows="5" placeholder="Tell Us Which Vehicle, and Your Reservation  Dates!" required></textarea>
+                    <div class="form-element">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="text-box" placeholder="What's Your Email?" required>
+                    </div>
+                    <div class="form-element">
+                        <label for="dates">Select Dates:</label>
+                        <input onclick="getDate()" type="text" id="dates" name="daterange" class="text-box" value="01/01/2023" />
+                    </div>
+                    <div class="form-element">
+                        <label for="message">Message:</label>
+                        <textarea name="message" id="message" class="message" rows="5" placeholder="Tell Us Which Vehicle, and Your Reservation  Dates!" required></textarea>
+                    </div>
                     <input type="submit" name="submit" class="send-btn" value="Send">
                     <input type="hidden" name="_captcha" value="false">
                 </form>
