@@ -1,3 +1,9 @@
+//Update Select Vehicle Form
+function updateSelected(val) {
+    let select = document.querySelector('select');
+    console.log(select.value);
+    select.value = val;
+}
 //Set new date
 let curDate = document.getElementById('dates').getAttribute('value');
 date = new Date();
@@ -5,7 +11,7 @@ year = date.getFullYear();
 month = date.getMonth() + 1;
 day = date.getDate();
 curDate = month + "/" + day + "/" + year;
-console.log(curDate);
+// console.log(curDate);
 
 //Data Range Calender Picker
 $(function getDate() {
