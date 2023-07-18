@@ -419,7 +419,7 @@
                     </div>
                     <div class="form-element">
                         <label for="phone">Phone:</label>
-                        <input type="tel" id="phone" name="phone" class="text-box" placeholder="xxxxxxxxxx" pattern="[0-9]{10}" required />
+                        <input onkeydown="phoneNumberFormatter()" type="tel" id="phone" name="phone" class="text-box" placeholder="(xxx) xxx - xxxx" required />
                     </div>
                     <div class="form-element">
                         <label for="email">Email:</label>
